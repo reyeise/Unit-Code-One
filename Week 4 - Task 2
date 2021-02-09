@@ -1,0 +1,11 @@
+# Start with 4 words “comfortable”, “round”, “support”, “machinery”, return a list of all possible 2 word combinations
+
+import itertools
+
+list1 = ["comfortable", "round", "support", "machinery"]
+list2 = ["nice", "cutG"]
+
+all_combinations = [list(zip(each_permutation, list2))
+                             for each_permutation in itertools.permutations(list1, len(list2))]
+
+print(all_combinations)
