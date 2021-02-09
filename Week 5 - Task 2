@@ -1,0 +1,14 @@
+# Implement a Caesar Cipher function that takes a string and shift amount, outputs the encrypted string.
+
+message = input('Enter your message here: ')
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+key = 7
+new_msg = ''
+for i in message:
+    position = alphabet.find(i)
+    new_position = (position + 7) % 26
+    new_msg += alphabet[new_position]
+
+print(new_msg)
