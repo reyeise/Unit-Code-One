@@ -1,0 +1,14 @@
+# Given 3 positive integers, find the sum of all numbers between the first two that are a multiple of the third.
+
+
+total = 0
+num = float(input("Enter number or a negative "
+                  "number to quit: "))
+
+while num >-1:
+    total = total + num
+    num = float(input('Enter the next number or a '
+                      "negative number to quit: "))
+
+
+print("\nThe sum of all the numbers you entered is", total)
