@@ -1,0 +1,10 @@
+# Implement division as a series of subtraction.
+# The program should only deal with integers and report the remainder if there is one.
+
+x = float(input('Enter first number: '))
+y = float(input('Enter second number: '))
+
+print('The subtraction of the three numbers =', x - y, '\n')
+
+remainder = x%y
+print('The remainder number is =', remainder)
