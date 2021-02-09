@@ -1,0 +1,9 @@
+# Write a program that given a list of numbers, multiply all numbers in the list.
+# Bonus for ignoring non-number element.
+
+total = 1
+num_list = [15, 20, 25, 30, 35]
+for i in num_list:
+    total = total * i
+
+print(total)
