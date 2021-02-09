@@ -1,0 +1,18 @@
+# Write a function that takes in any English word and turns it into pig latin.
+# - Example input: “technique”, “omelet”, “string”
+
+pigLatin = input("Convert message to pig latin: ")
+wordList = pigLatin.lower().split(" ")
+vowels = ['a', 'e', 'i', 'o', 'u']
+pigLatin = []
+eachWord = []
+for word in wordList:
+    if word[0] in 'aeiou': #case where vowel is first
+        pigLatin.append(word + 'yay')
+    if word[0] not in 'aeiou':
+        for letter in word:
+            if letter in 'aeiou':
+                pigLatin.append(word[word.index(letter):] + word[:word.index(letter)] +'ay')
+
+
+print(" ".join(pigLatin))
