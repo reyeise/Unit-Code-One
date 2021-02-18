@@ -1,0 +1,26 @@
+# Set initial state of l-system
+initial = "AB"
+
+# Rules for the l-system
+rules = {
+	"A": "AB",
+	"B": "A"
+}
+# Grabs one particular generation
+def l_system(initial, rules, generation):
+	current = initial
+
+# Each generation will have a result, loops through 9 generations
+	for _ in range(0, generation):
+		result = ""
+
+# States what the rules are, and adding the string of the rules into result 
+		for state in current:
+			result += rules.get(state, state)
+
+		current = result
+
+	return current
+
+for i in range(0, 10):
+	print( "{}: {}".format(i, l_system(initial, rules, i)) )
